@@ -1,26 +1,35 @@
 {
-    "name": "pxt-serial2",
-    "description": "",
+    "name": "serial2",
+    "description": "A second serial component for pxt/microbit",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "microphone": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
-        "README.md",
-        "custom.ts"
+        "serial2.ts",
+        "serial2_sim.ts",
+        "serial2.cpp",
+        "NRF52Serial2.h",
+        "NRF52Serial2.cpp",
+        "shims.d.ts",
+        "enums.d.ts",
+        "README.md"
     ],
     "testFiles": [
+        "main.blocks",
+        "main.ts",
         "test.ts"
     ],
+    "public": true,
     "targetVersions": {
-        "target": "7.0.51",
         "targetId": "microbit"
     },
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "disablesVariants": [
+        "mbdal"
+    ]
 }
